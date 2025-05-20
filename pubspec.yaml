@@ -1,0 +1,33 @@
+# 📄 pubspec.yaml
+name: kcbox
+description: A smart household inventory manager using Flutter.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  file_picker: ^6.1.1 # ✅ 이미지/파일 선택용
+  cupertino_icons: ^1.0.2
+  uuid: ^4.0.0 # ✅ 추가
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  plugin:
+    platforms:
+      android:
+        default_package: file_picker # ✅ Android에서만 기본 플러그인으로 사용
+      ios:
+        default_package: file_picker # ✅ iOS에서도 사용
